@@ -4,7 +4,7 @@
 let surname = prompt("Введите вашу фамилию");
 let nickname = prompt("Введите ваш никнейм");
 
-if (username.length > 0 && surname.length > 0 && nickname.length > 0) {
+if (username && surname && nickname) {
   console.log(`Привет ${username} ${surname} ${nickname}`);
 } else if (username.length > 0 && surname.length > 0) {
   console.log(`Привет ${username} ${surname}`);
@@ -17,109 +17,26 @@ if (username.length > 0 && surname.length > 0 && nickname.length > 0) {
 } */
 
 // 2
-/* let number = +prompt("Введите любое число");
-if (number >= 100) {
-  if (number % 2 === 0) {
-    if (Number.isInteger(number)) {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число больше ста, четное, положительное, не дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число больше ста, четное, отрицательное, не дробное"
-        );
-      }
-    } else {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число больше ста, четное, положительное, дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число больше ста, четное, отрицательное, дробное"
-        );
-      }
-    }
-  } else {
-    if (Number.isInteger(number)) {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число больше ста, нечетное, положительное, не дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число больше ста, нечетное, отрицательное, не дробное"
-        );
-      }
-    } else {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число больше ста, нечетное, положительное, дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число больше ста, нечетное, отрицательное, дробное"
-        );
-      }
-    }
-  }
-} else {
-  if (number % 2 === 0) {
-    if (Number.isInteger(number)) {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число меньше ста, четное, положительное, не дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число меньше ста, четное, отрицательное, не дробное"
-        );
-      }
-    } else {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число меньше ста, четное, положительное, дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число меньше ста, четное, отрицательное, дробное"
-        );
-      }
-    }
-  } else {
-    if (Number.isInteger(number)) {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число меньше ста, нечетное, положительное, не дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число меньше ста, нечетное, отрицательное, не дробное"
-        );
-      }
-    } else {
-      if (number >= 0) {
-        console.log(
-          "Введенное вами число меньше ста, нечетное, положительное, дробное"
-        );
-      } else {
-        console.log(
-          "Введенное вами число меньше ста, нечетное, отрицательное, дробное"
-        );
-      }
-    }
-  }
-} */
+/* let numbers = prompt("Введите любое число: ");
+let moreLess = (numbers > 100) ? "больше ста" : "меньше ста";
+let evenness = (numbers % 2 == 0 ) ? "чётное число" : "нечётное число";
+let fractionality = (numbers % 1 == 0) ? "не дробное" : "дробное число" ;
+let positive = (numbers > 0) ? "положительное число" : "отрицательное число" ;
+
+if (+numbers) {
+     alert(`Введённое вами число: ${moreLess}, ${evenness}, ${fractionality}, ${positive}`);
+  } else alert("Вы не ввели число!"); */
+
+
 
 // 3
 //3.1
-/* let firstNumber = +prompt('Введите первое число');
+ /* let firstNumber = +prompt('Введите первое число');
     let twoNumber = +prompt('Введите второе число');
     let threeNumber = +prompt('Введите третье число');
     
     let plus = firstNumber + twoNumber + threeNumber;
-    (typeof firstNumber === 'number') && (typeof twoNumber === 'number') && (typeof threeNumber === 'number') ? console.log(plus) : "Что-то не получилось " ; */
+    (isNaN(firstNumber) || isNaN(twoNumber) || isNaN(threeNumber)) ?  "Что-то не получилось " : console.log(plus) ;  */
 
 //3.2
 /* let name = prompt('Введите свое имя');
@@ -128,8 +45,8 @@ if (number >= 100) {
 
 // 4
 
-/* let vvod = +prompt("Введите число");
-if (typeof vvod === "number" && vvod >= 0 && vvod <= 9) {
+/* let enterNumber = +prompt("Введите число");
+if (typeof enterNumber === "number" && enterNumber >= 0 && enterNumber <= 9) {
   switch (vvod) {
     case 0: {
       alert("ноль");
@@ -172,8 +89,8 @@ if (typeof vvod === "number" && vvod >= 0 && vvod <= 9) {
       break;
     }
   }
-} else if (vvod < 0 || vvod > 9) {
+} else if (enterNumber < 0 || enterNumber > 9) {
   alert("Доступный ввод цифр от 0 до 9");
-} else if (isNaN(vvod)) {
+} else if (isNaN(enterNumber)) {
   alert("Значение невозможно преобразовать к числу");
 } */
