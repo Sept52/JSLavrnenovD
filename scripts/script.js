@@ -1,96 +1,107 @@
 // 1
 
-/* let username = prompt("Введите ваше имя");
-let surname = prompt("Введите вашу фамилию");
-let nickname = prompt("Введите ваш никнейм");
+/* let firstNumbers = +prompt(" Введите первое число диапазона");
+let twoNumbers = +prompt(" Введите второе число диапазона");
 
-if (username && surname && nickname) {
-  console.log(`Привет ${username} ${surname} ${nickname}`);
-} else if (username.length > 0 && surname.length > 0) {
-  console.log(`Привет ${username} ${surname}`);
-} else if (surname.length > 0 && nickname.length > 0) {
-  console.log(`Привет ${nickname}`);
-} else if (username.length > 0 && nickname.length > 0) {
-  console.log(`Привет ${username}`);
-} else if (surname.length > 0 || nickname.length > 0) {
-  console.log(`Привет Noname`);
-} */
+function range(num, num2) {
+  let subNym = num;
+  let subNym2 = num2;
+  if (num2 - num >= 5 && num2 > num) {
+    for (i = 0; i <= num2 - num; i++) {
+      console.log(subNym++);
+    }
+  } else if (num - num2 >= 5 && num > num2) {
+    for (i = 0; i <= num - num2; i++) {
+      console.log(subNym--);
+    }
+  } else {
+    return alert("Неверно введены данные");
+  }
+}
+
+range(firstNumbers, twoNumbers); */
 
 // 2
-/* let numbers = prompt("Введите любое число: ");
-let moreLess = (numbers > 100) ? "больше ста" : "меньше ста";
-let evenness = (numbers % 2 == 0 ) ? "чётное число" : "нечётное число";
-let fractionality = (numbers % 1 == 0) ? "не дробное" : "дробное число" ;
-let positive = (numbers > 0) ? "положительное число" : "отрицательное число" ;
 
-if (+numbers) {
-     alert(`Введённое вами число: ${moreLess}, ${evenness}, ${fractionality}, ${positive}`);
-  } else alert("Вы не ввели число!"); */
+/* let truePinCode = "0001";
+let truePukCode = "4444";
 
+function checkCode() {
+  for (i = 1; i <= 3; i++) {
+    let enterCode = prompt("Введите PIN-код:");
+    if ((enterCode === truePinCode) && !isNaN(enterCode)) {
+      return alert("Вы ввели правильный PIN-код");
+    } else {
+      alert("Введен неверный PIN-код");
+    }
+  }
+  for (i = 1; i <= 3; i++) {
+    let enterCode = prompt("Введите PUK-код:");
+    if (enterCode === truePukCode && !isNaN(enterCode)) {
+      return alert("Вы ввели правильный PUK-код");
+    } else {
+      alert("Введен неверный PUK-код");
+    }
+  }
+}
 
+checkCode(); */
 
 // 3
-//3.1
- /* let firstNumber = +prompt('Введите первое число');
-    let twoNumber = +prompt('Введите второе число');
-    let threeNumber = +prompt('Введите третье число');
-    
-    let plus = firstNumber + twoNumber + threeNumber;
-    (isNaN(firstNumber) || isNaN(twoNumber) || isNaN(threeNumber)) ?  "Что-то не получилось " : console.log(plus) ;  */
 
-//3.2
-/* let name = prompt('Введите свое имя');
-    let age = prompt('Введите свой возраст');
-    age >= 18 ? alert(`Добро пожаловать ${name}`) :  alert(`Простите, ${name}, доступ закрыт`) */
+/* let firstNumbers = +prompt(" Введите первое число диапазона");
+let twoNumbers = +prompt(" Введите второе число диапазона");
+
+function range(num, num2) {
+  let subNym = num;
+  let subNym2 = num2;
+
+  if (num2 - num >= 5 && num2 > num) {
+    for (i = 0; i <= num2 - num; i++) {
+      let moreLess = (subNym > 100) ? "больше ста" : "меньше ста";
+      let evenness = (subNym % 2 == 0 ) ? "чётное число" : "нечётное число";
+      let positive = (subNym > 0) ? "положительное число" : "отрицательное число" ;
+      console.log(`${subNym++}, ${moreLess}, ${evenness}, ${positive}.`);
+    }
+  } else if (num - num2 >= 5 && num > num2) {
+    for (i = 0; i <= num - num2; i++) {
+      let moreLess = (subNym2 > 100) ? "больше ста" : "меньше ста";
+      let evenness = (subNym2 % 2 == 0 ) ? "чётное число" : "нечётное число";
+      let positive = (subNym2 > 0) ? "положительное число" : "отрицательное число" ;
+      console.log(`${subNym2++}, ${moreLess}, ${evenness}, ${positive}.`);
+    }
+  } else {
+    return alert("Неверно введены данные");
+  }
+}
+range(firstNumbers, twoNumbers); */
 
 // 4
 
-/* let enterNumber = +prompt("Введите число");
-if (typeof enterNumber === "number" && enterNumber >= 0 && enterNumber <= 9) {
-  switch (vvod) {
-    case 0: {
-      alert("ноль");
-      break;
+/* let firstNumbers = +prompt(" Введите первое число диапазона");
+let twoNumbers = +prompt(" Введите второе число диапазона");
+
+function range(num, num2) {
+  let subNym = num;
+  let subNym2 = num2;
+
+
+  if (num2 > num) {
+    for (i = 0; i <= num2 - num; i++) {
+      console.log(subNym++);
+      if (i === 7){
+        return;
+      }
     }
-    case 1: {
-      alert("один");
-      break;
+  } else if (num > num2) {
+    for (i = 0; i <= num - num2; i++) {
+      console.log(subNym2++);
+      if (i === 7){
+        return;
+      }
     }
-    case 2: {
-      alert("два");
-      break;
-    }
-    case 3: {
-      alert("три");
-      break;
-    }
-    case 4: {
-      alert("четыре");
-      break;
-    }
-    case 5: {
-      alert("пять");
-      break;
-    }
-    case 6: {
-      alert("шесть");
-      break;
-    }
-    case 7: {
-      alert("семь");
-      break;
-    }
-    case 8: {
-      alert("восемь");
-      break;
-    }
-    case 9: {
-      alert("девять");
-      break;
-    }
+  } else {
+    return alert("Неверно введены данные");
   }
-} else if (enterNumber < 0 || enterNumber > 9) {
-  alert("Доступный ввод цифр от 0 до 9");
-} else if (isNaN(enterNumber)) {
-  alert("Значение невозможно преобразовать к числу");
-} */
+}
+range(firstNumbers, twoNumbers); */
