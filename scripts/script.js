@@ -14,10 +14,12 @@ if (username && surname && nickname) {
   console.log(`Привет ${username}`);
 } else if (surname.length > 0 || nickname.length > 0) {
   console.log(`Привет Noname`);
+} else {
+  console.log(`Привет Noname`);
 } */
 
 // 2
-/* let numbers = prompt("Введите любое число: ");
+/* const numbers = prompt("Введите любое число: ");
 let moreLess = (numbers > 100) ? "больше ста" : "меньше ста";
 let evenness = (numbers % 2 == 0 ) ? "чётное число" : "нечётное число";
 let fractionality = (numbers % 1 == 0) ? "не дробное" : "дробное число" ;
@@ -31,9 +33,9 @@ if (+numbers) {
 
 // 3
 //3.1
- /* let firstNumber = +prompt('Введите первое число');
-    let twoNumber = +prompt('Введите второе число');
-    let threeNumber = +prompt('Введите третье число');
+ /* const firstNumber = +prompt('Введите первое число');
+    const twoNumber = +prompt('Введите второе число');
+    const threeNumber = +prompt('Введите третье число');
     
     let plus = firstNumber + twoNumber + threeNumber;
     (isNaN(firstNumber) || isNaN(twoNumber) || isNaN(threeNumber)) ?  "Что-то не получилось " : console.log(plus) ;  */
@@ -45,9 +47,9 @@ if (+numbers) {
 
 // 4
 
-/* let enterNumber = +prompt("Введите число");
+/* const enterNumber = +prompt("Введите число");
 if (typeof enterNumber === "number" && enterNumber >= 0 && enterNumber <= 9) {
-  switch (vvod) {
+  switch (enterNumber) {
     case 0: {
       alert("ноль");
       break;
